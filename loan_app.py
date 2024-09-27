@@ -3,7 +3,7 @@ import numpy as np
 import pickle
 from sklearn.preprocessing import LabelEncoder
 
-model = pickle.load(open('model.sav', 'rb'))
+model = pickle.load(open('model.pkl', 'rb'))
 
 def predict_default(input_data):
     prediction = model.predict(input_data)  
@@ -20,7 +20,7 @@ employment_status_encoder.classes_ = np.array(['Permanent', 'Self-Employed', 'St
 # Streamlit App
 st.title("Loan Default Prediction")
 html_file="""
-<div style="background-color:tomato; padding:10px">
+<div style="background-color:Blue; padding:10px">
 <h2 style="color:white; text-align:center;">StreamLit loan default App</h2>
 </div>
 """
